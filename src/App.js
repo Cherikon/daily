@@ -1,5 +1,15 @@
 import React, {useState} from 'react';
-import {addStyles, Button, ConfettiPiece, generateKeyframes, Header, MainBlock, Result, Image} from "./styles";
+import {
+    addStyles,
+    Button,
+    ConfettiPiece,
+    generateKeyframes,
+    Header,
+    MainBlock,
+    Result,
+    Image,
+    ContentBlock
+} from "./styles";
 import fon from './images/fon.png'
 
 const Confetti = ({pieces}) => (
@@ -80,28 +90,30 @@ export const App = () => {
 
     return (
         <MainBlock>
+            <ContentBlock>
             <span>
             Участвует 10 человек
             </span>
-            <Header>Рандомный выбор стартующего на дейликах</Header>
-            {/*<Image src={fon}/>*/}
+                <Header>Рандомный выбор стартующего на дейликах</Header>
+                {/*<Image src={fon}/>*/}
 
-            <Button onClick={() => {
-                setLoading(true);
-                setResult('');
+                <Button onClick={() => {
+                    setLoading(true);
+                    setResult('');
 
-                setTimeout(() => {
-                    setLoading(false)
-                    setResult('Сергей Юхно')
-                    createConfetti()
-                }, 3000)
-            }}
-                    $rotate={loading}
-            >
-                Let's get the ball rolling!
-            </Button>
-            {result ? <Result>{result}</Result> : <div style={{height: 95}}/>}
-            <Confetti pieces={confettiPieces}/>
+                    setTimeout(() => {
+                        setLoading(false)
+                        setResult('Сергей Юхно')
+                        createConfetti()
+                    }, 3000)
+                }}
+                        $rotate={loading}
+                >
+                    Let's get the ball rolling!
+                </Button>
+                {result ? <Result>{result}</Result> : <div style={{height: 95}}/>}
+                <Confetti pieces={confettiPieces}/>
+            </ContentBlock>
         </MainBlock>
     );
 };

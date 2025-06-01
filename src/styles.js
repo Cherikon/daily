@@ -2,16 +2,6 @@ import styled from "styled-components";
 import fon from './images/fon.png'
 
 export const MainBlock = styled.div`
-    font-family: "Caveat", cursive;
-    text-align: center;
-    color: white;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1100px;
-    margin: 0 auto;
     position: relative;
     background-image: url(${fon});
     background-repeat: no-repeat;
@@ -23,6 +13,20 @@ export const MainBlock = styled.div`
         font-size: 40px;
         color: #8f8e8e;
     }
+`
+
+export const ContentBlock = styled.div`
+    font-family: "Caveat", cursive;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+
 `
 
 export const Button = styled.button`
