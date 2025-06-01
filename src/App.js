@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {addStyles, Button, ConfettiPiece, generateKeyframes, Header, MainBlock, Result} from "./styles";
+import {addStyles, Button, ConfettiPiece, generateKeyframes, Header, MainBlock, Result, Image} from "./styles";
+import fon from './images/fon.png'
 
 const Confetti = ({pieces}) => (
     <>
@@ -83,6 +84,7 @@ export const App = () => {
             Участвует 10 человек
             </span>
             <Header>Рандомный выбор стартующего на дейликах</Header>
+            {/*<Image src={fon}/>*/}
 
             <Button onClick={() => {
                 setLoading(true);

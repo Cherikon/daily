@@ -1,4 +1,5 @@
-import styled, {css, keyframes} from "styled-components";
+import styled from "styled-components";
+import fon from './images/fon.png'
 
 export const MainBlock = styled.div`
     font-family: "Caveat", cursive;
@@ -12,6 +13,11 @@ export const MainBlock = styled.div`
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
+    background-image: url(${fon});
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position-x: 100%;
+    background-position-y: 104%;
 
     span {
         font-size: 40px;
@@ -49,7 +55,7 @@ export const Button = styled.button`
 `
 
 export const Header = styled.div`
-    font-size: 90px;
+    font-size: 80px;
 `
 
 export const Result = styled.div`
@@ -97,3 +103,10 @@ export const ConfettiPiece = styled.div`
   bottom: ${props => props.bottom}px;
   z-index: 1000;
 `;
+
+export const Image = styled.img`
+    width: 50%;
+    position: absolute;
+    right: -50px;
+    bottom: -30px;
+`
